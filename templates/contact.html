@@ -1,0 +1,40 @@
+<body background="{{ url_for('static', filename='images/Corgi.jpg') }}">
+{% extends "bootstrap/base.html" %}
+
+{% block title %}Doggonit{% endblock %}
+
+{% block navbar %}
+
+<div class="navbar navbar-inverse" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Doggonit</a>
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li><a href="/Borzoi">Experience Borzoi</a></li>
+                <li><a href="/Contact">Contact Info</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+{% endblock %}
+{% block content %}
+<div class="container">
+
+    <div class="page-header">
+
+        <h1 style="color:whitesmoke;">This site was created by: Jonathan Giraud</h1>
+        <h2 style="color:whitesmoke;">GitHub: https://github.com/Jogira</h2>
+        <h3 style="color:whitesmoke;">E-mail: Giraudjj@vcu.edu</h3>
+        <h4 style="color:whitesmoke;">Favorite Dog: Tie between a Corgi and Golden Retriever.</h4>
+    </div>
+</div>
+{% endblock %}

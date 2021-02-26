@@ -1,0 +1,39 @@
+<body background="{{ url_for('static', filename='images/Boi.jpg')}}"
+{% extends "bootstrap/base.html" %}
+
+{% block title %}Doggonit{% endblock %}
+
+{% block navbar %}
+<div class="navbar navbar-inverse" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Doggonit</a>
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li><a href="/Borzoi">Experience Borzoi</a></li>
+                <li><a href="/Contact">Contact Info</a></li>
+            </ul>。
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="page-header">
+        {% if creatureName == "Borzoi" or creatureName == "borzoi" %}
+        <h1 style="color:limegreen;">So you are already aware of the legendary Borzoi. Welcome to the club.</h1>
+        {% else %}
+        <h1 style="color:whitesmoke;">So you have decided to call this abomination '{{creatureName}}', huh?</h1>
+        <h2 style="color:whitesmoke;">ＮＩＣＥ。</h2>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}
